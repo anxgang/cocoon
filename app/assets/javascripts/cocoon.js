@@ -1,4 +1,4 @@
-(function($) {
+export const cocoonInitializer = function($, jQuery) {
 
   var cocoon_element_counter = 0;
 
@@ -133,7 +133,4 @@
       $this.closest('.' + wrapper_class).hide();
     });
   });
-
-})(jQuery);
-
-
+}
