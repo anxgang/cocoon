@@ -39,6 +39,8 @@ export const cocoonInitializer = function($, jQuery) {
 
   $(document).on('click', '.add_fields', function(e) {
     e.preventDefault();
+    e.stopPropagation();
+    
     var $this                 = $(this),
         assoc                 = $this.data('association'),
         assocs                = $this.data('associations'),
