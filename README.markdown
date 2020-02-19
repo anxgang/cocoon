@@ -27,6 +27,34 @@ gem "cocoon"
 
 > Please note that for rails 4 you will need at least v1.2.0 or later.
 
+### Rails 6
+
+Requires additional front-end package
+
+```
+# Using the NPM client
+npm install github:anxgang/cocoon --save
+
+# Using the Yarn client
+yarn add github:anxgang/cocoon
+```
+
+and, then, in your JS files, import like this:
+
+```js
+import $ from 'jquery'
+import jQuery from 'jquery'
+import { cocoonInitializer } from 'cocoon/app/assets/javascripts/cocoon'
+
+// to initialize cocoon ...
+cocoonInitializer($, jQuery)
+
+// to catch events from cocoon ...
+$(document).on('cocoon:after-insert', () => {
+    // ...
+})
+```
+
 ### Rails 3.1+/Rails 4/Rails 5
 
 Add the following to `application.js` so it compiles to the asset pipeline:
